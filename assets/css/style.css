@@ -1,0 +1,19 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    display: inline-block;
+    text-align: center;
+}
+
+header nav {
+    padding-top: 15px;
+    float: right;
+    font-size: 20px;
+}
+
+article, h2, #btn {
+    visibility: hidden;
+}
+
