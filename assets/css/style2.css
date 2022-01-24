@@ -1,0 +1,14 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+h2 {
+    font-size: 26px;
+}

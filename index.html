@@ -10,24 +10,60 @@
     <body>
         <header>
             <h1>Welcome to QuizWiz!</h1>
-            <nav id="timer"></nav>
         </header>
 
         <section>
-            <p1>Answer all the questions before the timer runs out!</p>
-            <p2>Wrong answers receive a -10 second penalty</p>
-            <p3>Don't forget to check out the Highscores page when you're done!</p>
-            <p4>When you're ready...</p>
-            <button id="startButton" class="btn">Press to Start!</button>
+            <div id="timer"></div>
+            <div id="rules">
+                <p1>Answer all the questions before the timer runs out!</p>
+                <p2>Wrong answers receive a -10 second penalty</p>
+                <p3>Don't forget to check out the Highscores page when you're done!</p>
+                <p4>When you're ready...</p>
+                <button id="startButton" class="btn">Press to Start!</button>
+            </div>
         </section>
 
-        <article id="quiz">
+        <article>
             <h2>test</h2>
-            <button id="button1">test</button>
-            <button id="button2">test</button>
-            <button id="button3">test</button>
-            <button id="button4">test</button>
+            <div id="q1btns">
+                <p><button id="button1" onclick="">test</button></p>
+                <p><button id="button2" onclick="">test</button></p>
+                <p><button id="button3" onclick="">test</button></p>
+                <p><button id="button4" onclick="">test</button></p>
+            </div>
+            <div id="q2btns">
+                <p><button id="button5" onclick="">test2</button></p>
+                <p><button id="button6" onclick="">test2</button></p>
+                <p><button id="button7" onclick="">test2</button></p>
+                <p><button id="button8" onclick="">test2</button></p>
+            </div>
+            <div id="q3btns">
+                <p><button id="button9" onclick="">test3</button></p>
+                <p><button id="button10" onclick="">test3</button></p>
+                <p><button id="button11" onclick="">test3</button></p>
+                <p><button id="button12" onclick="">test3</button></p>
+            </div>
+            <div id="q4btns">
+                <p><button id="button13" onclick="">test4</button></p>
+                <p><button id="button14" onclick="">test4</button></p>
+                <p><button id="button15" onclick="">test4</button></p>
+                <p><button id="button16" onclick="">test4</button></p>
+            </div>
+            <div id="q5btns">
+                <p><button id="button17" onclick="">test5</button></p>
+                <p><button id="button18" onclick="">test5</button></p>
+                <p><button id="button19" onclick="">test5</button></p>
+                <p><button id="button20" onclick="">test5</button></p>
+            </div>
         </article>
+
+        <aside> 
+            <form action="./assets/pages/resources.html" method="post">
+                <label form="initials">Enter your initials: </label>
+                <input type="text" id="userInitials" required>
+                <input type="submit" id="save">
+            </form>
+        </aside>
 
         <script src="assets/js/script.js"></script>
     </body>

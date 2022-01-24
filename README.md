@@ -1,6 +1,9 @@
 # quiz-wiz
 creating a quiz working with javascript and DOM
 
+notes so far, on work that ive done, day two was pretty hard, i struggled with the timer going negative exponentially on each click of an answer
+
+
 pseudo code notes:
 start timer and game
 show question 1

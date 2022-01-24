@@ -5,15 +5,42 @@
 header {
     display: inline-block;
     text-align: center;
+    font-size: 30px;
+
 }
 
-header nav {
-    padding-top: 15px;
-    float: right;
-    font-size: 20px;
+
+h2 {
+    font-size: 26px;
 }
 
-article, h2, #btn {
+#timer {
+    font-size: 22px;
+}
+
+#rules {
+    visibility: visible;
+}
+
+article, h2 {
+    visibility: hidden;
+    text-align: center;
+    padding: 5px;
+    margin: 15px
+}
+
+#q1btns, #q2btns, #q3btns, #q4btns, #q5btns {
+    display: inline-block;
     visibility: hidden;
 }
 
+p {
+    padding: 5px;
+}
+
+aside {
+    visibility: hidden;
+    text-align: center;
+    padding: 5px;
+    margin: 15px
+}
