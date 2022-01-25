@@ -3,28 +3,32 @@
 }
 
 header {
-    display: inline-block;
+    padding: 20px;
     text-align: center;
-    font-size: 30px;
-
+    font-size: 40px;
 }
 
 
 h2 {
-    font-size: 26px;
+    font-size: 20px;
 }
 
 #timer {
+    visibility: hidden;
+    padding: 10px;
+    text-align: center;
     font-size: 22px;
 }
 
 #rules {
+    text-align: center;
     visibility: visible;
 }
 
 article, h2 {
     visibility: hidden;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 5px;
     margin: 15px
 }

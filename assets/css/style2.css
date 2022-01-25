@@ -1,14 +1,21 @@
+/* started with the same font family as the index.html page for continuity */
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-header {
-    display: inline-block;
+/* this container holds the whole page and centers everything */
+.container {
+    padding: 25px;
     text-align: center;
-    font-size: 30px;
-
 }
 
-h2 {
+/* small edits to the text on the page*/
+header {
+    padding: 25px;
+    font-size: 40px;
+}
+
+li {
+    padding: 25px;
     font-size: 26px;
 }
