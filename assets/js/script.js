@@ -29,10 +29,9 @@ var btn4question5 = document.getElementById("button20");
 // Add event listener to the start button
 startButton.addEventListener("click", theQuiz);
 
-// creating variables that I will use in different functions
+// creating variables that I will be used in different functions
 var time = 60;
 var gameOver = false;
-var score = localStorage.getItem("score", score);
 
 // defining theQuiz function which starts theTimer and question1
 function theQuiz() {
@@ -45,7 +44,7 @@ function theQuiz() {
     question.setAttribute('style','visibility: visible');
 
     quizSection.style.visibility = "visible";
-    theTimer()
+    theTimer();
     question1();
 }
 
@@ -103,18 +102,18 @@ function question2() {
 
     btn1question2.addEventListener("click", function() {
         time = time - 10;
-        question3()
+        question3();
     });
     btn2question2.addEventListener("click", function() {
         time = time - 10;
-        question3()
+        question3();
     });
     btn3question2.addEventListener("click", function() {
-        question3()
+        question3();
     });
     btn4question2.addEventListener("click", function() {
         time = time - 10;
-        question3()
+        question3();
     });
 }
 
@@ -230,19 +229,23 @@ function theTimer() {
     // adding this line below helped my code show the full 60 seconds. or else it always started at 59 seconds
     timerEl.style.visibility = "visible";
 
-    
+    // function that sets the timer
     var timerInterval = setInterval(function() {
         time--;
         timerEl.textContent = "Time: " + time + " seconds";
 
+        // stop the timer at 0 and also hides it
         if(time <= 0) {
             time = 0;
             clearInterval(timerInterval);
+            timerEl.style.visibility = "hidden";
             endGame();
         }
 
+        // i have this to clear the timer and hide it at the end of the game
         if(gameOver === true){
             clearInterval(timerInterval);
+            timerEl.style.visibility = "hidden";
         }
     }, 1000);
 }
@@ -255,7 +258,7 @@ function endGame() {
     btn4question5.remove();
 
     // saves the time as the users score, in localStorage
-    score = time;
+    var score = time;
     timerEl.textContent = "";
     question.textContent = "Your score is: " + score;
     localStorage.setItem("score", score);
@@ -273,10 +276,7 @@ function endGame() {
     var save = document.getElementById("save");
     save.addEventListener("click", function(event) {
         event.preventDefault;
-
         var initials = document.getElementById("userInitials").value;
-        console.log(initials);
-
         localStorage.setItem("userName", initials);
     });
 }

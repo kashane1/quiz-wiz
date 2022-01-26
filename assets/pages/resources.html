@@ -7,11 +7,17 @@
         <link rel="stylesheet" type="text/css" href="../css/reset.css" />
         <link rel="stylesheet" type="text/css" href="../css/style2.css" />
     </head>
+
+    <!--- this container class will hold everything on the page --->
     <body class="container">
         <header id="header">
             <h1>Highscores Page</h1>
+            <form>
+                <input type="button" value="Play Again?" onclick="history.back()">
+            </form>
         </header>
 
+        <!--- listcores will append each new score from localstorage --->
         <section>
             <ul id="listScores">
                 <li>Initials / Score</li>

@@ -1,18 +1,16 @@
+/* always start with a universal style */
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* for the title of the page */
 header {
     padding: 20px;
     text-align: center;
     font-size: 40px;
 }
 
-
-h2 {
-    font-size: 20px;
-}
-
+/* styling for the timer counting down */
 #timer {
     visibility: hidden;
     padding: 10px;
@@ -20,11 +18,13 @@ h2 {
     font-size: 22px;
 }
 
+/* for the rules section just below the timer */
 #rules {
     text-align: center;
     visibility: visible;
 }
 
+/* for the main quiz section of the page */
 article, h2 {
     visibility: hidden;
     display: flex;
@@ -33,6 +33,12 @@ article, h2 {
     margin: 15px
 }
 
+/* h2 will hold each question */
+h2 {
+    font-size: 20px;
+}
+
+/* for each set of buttons per question */
 #q1btns, #q2btns, #q3btns, #q4btns, #q5btns {
     display: inline-block;
     visibility: hidden;
@@ -42,6 +48,7 @@ p {
     padding: 5px;
 }
 
+/* the aside holds the form at the end of the quiz */
 aside {
     visibility: hidden;
     text-align: center;
