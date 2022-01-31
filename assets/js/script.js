@@ -4,28 +4,6 @@ var quizSection = document.querySelector("article");
 var timerEl = document.querySelector("#timer");
 var question = document.querySelector("h2");
 
-//assinging all buttons, needed new buttons for each question
-var btn1question1 = document.getElementById("button1");
-var btn2question1 = document.getElementById("button2");
-var btn3question1 = document.getElementById("button3");
-var btn4question1 = document.getElementById("button4");
-var btn1question2 = document.getElementById("button5");
-var btn2question2 = document.getElementById("button6");
-var btn3question2 = document.getElementById("button7");
-var btn4question2 = document.getElementById("button8");
-var btn1question3 = document.getElementById("button9");
-var btn2question3 = document.getElementById("button10");
-var btn3question3 = document.getElementById("button11");
-var btn4question3 = document.getElementById("button12");
-var btn1question4 = document.getElementById("button13");
-var btn2question4 = document.getElementById("button14");
-var btn3question4 = document.getElementById("button15");
-var btn4question4 = document.getElementById("button16");
-var btn1question5 = document.getElementById("button17");
-var btn2question5 = document.getElementById("button18");
-var btn3question5 = document.getElementById("button19");
-var btn4question5 = document.getElementById("button20");
-
 // Add event listener to the start button
 startButton.addEventListener("click", theQuiz);
 
@@ -50,174 +28,144 @@ function theQuiz() {
 
 // adding comments on q1 but all questions follow same format
 function question1() {
-    // reveal q1btns
-    btn1question1.style.visibility = "visible";
-    btn2question1.style.visibility = "visible";
-    btn3question1.style.visibility = "visible";
-    btn4question1.style.visibility = "visible";
+    // trying to use jquery to append newly created buttons all in one line
+    $('#buttons').append($('<p><button id="button1">JavaScript Open Now</button></p>'));
+    $('#buttons').append($('<p><button id="button2">JavaScrpt Power On</button></p>'));
+    $('#buttons').append($('<p><button id="button3">JavaScript Object Narator</button></p>'));
+    $('#buttons').append($('<p><button id="button4">JavaScript Object Notation</button></p>')); // correct button
 
-    //assign text content to show the question and new buttons
+    //assign text content to h2 element
     question.textContent = "What does JSON stand for?";
-    btn1question1.textContent = "JavaScript Open Now";
-    btn2question1.textContent = "JavaScrpt Power On";
-    btn3question1.textContent = "JavaScript Object Narator";
-    btn4question1.textContent = "JavaScript Object Notation"; // correct
 
-    // event listener for each button. this was a really hard part for me. my best solution was to have new buttons for every question
-    // nesting the next question in the current question function is probably not best practices and was maybe the cause of most of my problems
-    btn1question1.addEventListener("click", function() { 
+    // creating new events with jquery
+    $("#button1").on("click", function() {
         time = time - 10;
         question2();
     });
-    btn2question1.addEventListener("click", function() {
+    $("#button2").on("click", function() {
         time = time - 10;
         question2();
     });
-    btn3question1.addEventListener("click", function() {
+    $("#button3").on("click", function() {
         time = time - 10;
         question2();
     });
-    btn4question1.addEventListener("click", function() {
+    $("#button4").on("click", function() {
         question2();
     });
 }
 
 function question2() {
-    // the only difference from q1 is the later questions have to remove the old questions buttons
-    btn1question1.remove();
-    btn2question1.remove();
-    btn3question1.remove();
-    btn4question1.remove();
-
-    btn1question2.style.visibility = "visible";
-    btn2question2.style.visibility = "visible";
-    btn3question2.style.visibility = "visible";
-    btn4question2.style.visibility = "visible";
-
     question.textContent = "What does DOM stand for?";
-    btn1question2.textContent = "Dom from the Fast and the Furious";
-    btn2question2.textContent = "Direct Object Mutation";
-    btn3question2.textContent = "Document Object Model"; // correct
-    btn4question2.textContent = "Distributed Object Model";
 
-    btn1question2.addEventListener("click", function() {
+    // this line of jquery will grab all the children of the element with id #buttons and remove them
+    $("#buttons").children().remove();
+
+    //creating new buttons with the new answers, and new ids just in case that old onclick functions are listening?
+    $('#buttons').append($('<p><button id="button5">Dom from the Fast and the Furious</button></p>'));
+    $('#buttons').append($('<p><button id="button6">Direct Object Mutation</button></p>'));
+    $('#buttons').append($('<p><button id="button7">Document Object Model</button></p>')); // correct button
+    $('#buttons').append($('<p><button id="button8">Distributed Object Model</button></p>'));
+
+    $("#button5").on("click", function() {
         time = time - 10;
         question3();
     });
-    btn2question2.addEventListener("click", function() {
+    $("#button6").on("click", function() {
         time = time - 10;
         question3();
     });
-    btn3question2.addEventListener("click", function() {
+    $("#button7").on("click", function() {
         question3();
     });
-    btn4question2.addEventListener("click", function() {
+    $("#button8").on("click", function() {
         time = time - 10;
         question3();
     });
 }
 
 function question3() {
-    btn1question2.remove();
-    btn2question2.remove();
-    btn3question2.remove();
-    btn4question2.remove();
-
-    btn1question3.style.visibility = "visible";
-    btn2question3.style.visibility = "visible";
-    btn3question3.style.visibility = "visible";
-    btn4question3.style.visibility = "visible";
+    $("#buttons").children().remove();
 
     question.textContent = "What does API stand for?";
-    btn1question3.textContent = "Applications I Love";
-    btn2question3.textContent = "Article Paragrphs Include";
-    btn3question3.textContent = "Asymmetrical Programing Interval";
-    btn4question3.textContent = "Application Programming Interface"; // correct
 
-    btn1question3.addEventListener("click", function() {
+    $('#buttons').append($('<p><button id="button9">Applications I Love</button></p>'));
+    $('#buttons').append($('<p><button id="button10">Article Paragrphs Include</button></p>'));
+    $('#buttons').append($('<p><button id="button11">Asymmetrical Programing Interval</button></p>'));
+    $('#buttons').append($('<p><button id="button12">Application Programming Interface</button></p>')); // correct button
+
+    $("#button9").on("click", function() {
         time = time - 10;
         question4();
     });
-    btn2question3.addEventListener("click", function() {
+    $("#button10").on("click", function() {
         time = time - 10;
         question4();
     });
-    btn3question3.addEventListener("click", function() {
+    $("#button11").on("click", function() {
         time = time - 10;
         question4();
     });
-    btn4question3.addEventListener("click", function() {
+    $("#button12").on("click", function() {
         question4();
     });
 }
 
 function question4() {
-    btn1question3.remove();
-    btn2question3.remove();
-    btn3question3.remove();
-    btn4question3.remove();
-
-    btn1question4.style.visibility = "visible";
-    btn2question4.style.visibility = "visible";
-    btn3question4.style.visibility = "visible";
-    btn4question4.style.visibility = "visible";
+    $("#buttons").children().remove();
 
     question.textContent = "How do you stop setInterval from continuing forever?";
-    btn1question4.textContent = "Add return at the bottom of the function";
-    btn2question4.textContent = "Run clearInterval() on the function created with setInterval"; // correct
-    btn3question4.textContent = "After setting the time in milliseconds, write the end time as well";
-    btn4question4.textContent = "Ask it nicely, of course";
+    
+    $('#buttons').append($('<p><button id="button13">Add return at the bottom of the function</button></p>'));
+    $('#buttons').append($('<p><button id="button14">Run clearInterval() on the function created with setInterval</button></p>')); // correct button
+    $('#buttons').append($('<p><button id="button15">After setting the time in milliseconds, write the end time as well</button></p>'));
+    $('#buttons').append($('<p><button id="button16">Ask it nicely, of course</button></p>'));
 
-    btn1question4.addEventListener("click", function() {
+
+    $("#button13").on("click", function() {
         time = time - 10;
         question5();
     });
-    btn2question4.addEventListener("click", function() {
+    $("#button14").on("click", function() {
         question5();
     });
-    btn3question4.addEventListener("click", function() {
+    $("#button15").on("click", function() {
         time = time - 10;
         question5();
     });
-    btn4question4.addEventListener("click", function() {
+    $("#button16").on("click", function() {
         time = time - 10;
         question5();
     });
 }
 
 function question5() {
-    btn1question4.remove();
-    btn2question4.remove();
-    btn3question4.remove();
-    btn4question4.remove();
-
-    btn1question5.style.visibility = "visible";
-    btn2question5.style.visibility = "visible";
-    btn3question5.style.visibility = "visible";
-    btn4question5.style.visibility = "visible";
+    $("#buttons").children().remove();
 
     question.textContent = "Which is not true about localStorage?";
-    btn1question5.textContent = "It it stored within the user's browser";
-    btn2question5.textContent = "It will be deleted when the browser is closed"; // correct
-    btn3question5.textContent = "It can only ever store strings as values";
-    btn4question5.textContent = "It allows the programmer to read and write stored information";
+
+    $('#buttons').append($('<p><button id="button17">It it stored within the users browser</button></p>'));
+    $('#buttons').append($('<p><button id="button18">It will be deleted when the browser is closed</button></p>')); // correct button
+    $('#buttons').append($('<p><button id="button19">It can only ever store strings as values</button></p>'));
+    $('#buttons').append($('<p><button id="button20">It allows the programmer to read and write stored information</button></p>'));
 
     // and the last question has the endGame function nested within the buttons
-    btn1question5.addEventListener("click", function() {
+
+    $("#button17").on("click", function() {
         time = time - 10;
         gameOver = true;
         endGame();
     });
-    btn2question5.addEventListener("click", function() {
+    $("#button18").on("click", function() {
         gameOver = true;
         endGame();
     });
-    btn3question5.addEventListener("click", function() {
+    $("#button19").on("click", function() {
         time = time - 10;
         gameOver = true;
         endGame();
     });
-    btn4question5.addEventListener("click", function() {
+    $("#button20").on("click", function() {
         time = time - 10;
         gameOver = true;
         endGame();
@@ -252,10 +200,7 @@ function theTimer() {
 
 // defining the endGame function
 function endGame() {
-    btn1question5.remove();
-    btn2question5.remove();
-    btn3question5.remove();
-    btn4question5.remove();
+    $("#buttons").children().remove();
 
     // saves the time as the users score, in localStorage
     var score = time;
