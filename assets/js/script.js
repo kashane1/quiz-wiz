@@ -215,7 +215,7 @@ function endGame() {
     // showing the highscores link under the submit form
     var linkScores = document.createElement('div');
     form.append(linkScores);
-    linkScores.innerHTML = '<br><a href="./assets/pages/resources.html">View Highscores Page</a>';
+    linkScores.innerHTML = '<br><a href="./assets/highscores/index.html">View Highscores Page</a>';
     
     // this action records the users initials and score and saves to localStorage
     var save = document.getElementById("save");
