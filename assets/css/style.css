@@ -38,12 +38,6 @@ h2 {
     font-size: 20px;
 }
 
-/* for each set of buttons per question */
-#q1btns, #q2btns, #q3btns, #q4btns, #q5btns {
-    display: inline-block;
-    visibility: hidden;
-}
-
 p {
     padding: 5px;
 }
